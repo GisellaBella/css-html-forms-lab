@@ -100,9 +100,18 @@
 		function makeResults() {
 			var results = document.createElement('section');
 			results.innerHTML = '<h1>' + 'A true story:' + '</h1>';
-			results.className = 'container results';
+			results.className = 'container  results';
 			main.appendChild(results);
-		};
+			}
+	
+		
+		$("form").on("submit", function(event){
+			event.preventDefault();
+			makeResults();
+
+
+
+		
 		/*
 		
 			Make a function that will create <section> element and append it to #main.
@@ -111,9 +120,43 @@
 			Don't append it until the form has been submitted.
 
 		*/
+/*
+		var $onceUpon = "Once upon a time there was a Developer named " + {name: $('#name').val()} + ".";
+		console.log ($onceUpon);
 
 
-		$("form").on("submit", function(event){
+		$('.container').append($(onceUpon));
+		console.log ($container);
+
+		var $knowledge = {name: $('#name').val()}  + "came to General Asssembly to" + " " + {verb1: $('verb-1').val()}  + "the great mountain of programming knowledge.";
+		console.log ($knowledge);
+
+		$('.container').append($(knowledge));
+
+		var mission = {Noun:$('#name').val()} +", " + {name: $('#name').val()} + "shouted.";
+		console.log ($knowledge);
+
+		$('.container').append($(mission));
+
+		var sentiment = "Though" + {Sentiment: $('radio1', 'radio2', 'radio3').val()} + ", " + {name: $('#name').val()} + " was able to overcome all obstacles with the power of their "+ {Noun:$('noun-2').val()};
+
+		console.log ($sentiment);
+
+		$('.container').append($(sentiment));
+
+		var success = "In the end, their success can be contributed entirely to their " + {Sentiment: $('check1', 'check2', 'check3').val()} + " "+ {Noun:$('noun-2').val()}; + ".";
+
+		console.log ($success);
+
+		$('.container').append($(success));
+
+
+
+
+
+*/
+
+				
 
 		    // Stop the form from submitting
 
@@ -135,6 +178,9 @@
 
 	    	*/ 
 		});
+		console.log ("testing");
+			
+		
 	</script>
 
 </body>
