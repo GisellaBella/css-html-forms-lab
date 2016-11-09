@@ -3,6 +3,7 @@
 <head>
 	<title>CSS HTML Forms Lab</title>
 	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Proza+Libre:400,500,700,800" rel="stylesheet">
 </head>
 <body>
 	<section id="main">
@@ -102,80 +103,46 @@
 			results.innerHTML = '<h1>' + 'A true story:' + '</h1>';
 			results.className = 'container  results';
 			main.appendChild(results);
+
 			}
 	
-		
-		$("form").on("submit", function(event){
+			$("form").on("submit", function(event){
 			event.preventDefault();
+
 			makeResults();
 
+			var $onceUpon = "Once upon a time there was a Developer named " + $('#name').val() + ". ";
+			var $knowledge = $('#name').val()  + " came to General Asssembly to" + " " + $('verb-1').val() + " the great mountain of programming knowledge. ";
+			var $mission = $('#mission').val() +", " + $('#name').val() + " shouted.";
+			var $sentiment = "Though " + $('radio1').val("dubious,")+ ", " + $('#name').val() + " was able to overcome all obstacles with the power of their "+ $('noun-2').val();
+			var $success = ". In the end, their success can be contributed entirely to their " + $('#check2').val("honed") +" "+ $('#noun-2').val() + ".";	
 
+			$('.results').append($onceUpon);
+			$('.results').append($knowledge);
+			$('.results').append($mission);
+			$('.results').append($sentiment);
+			$('.results').append($success);
 
-		
 		/*
-		
+
+$( "#single" ).val( "Single2" );
+$( "#multiple" ).val([ "Multiple2", "Multiple3" ]);
+$( "input").val([ "check1", "check2", "radio1" ]);
+
+
 			Make a function that will create <section> element and append it to #main.
 			Give the new <section> classes of "container" and "results"
 			Put an <h1> inside it that says "A True Story:"
 			Don't append it until the form has been submitted.
-
-		*/
-/*
-		var $onceUpon = "Once upon a time there was a Developer named " + {name: $('#name').val()} + ".";
-		console.log ($onceUpon);
-
-
-		$('.container').append($(onceUpon));
-		console.log ($container);
-
-		var $knowledge = {name: $('#name').val()}  + "came to General Asssembly to" + " " + {verb1: $('verb-1').val()}  + "the great mountain of programming knowledge.";
-		console.log ($knowledge);
-
-		$('.container').append($(knowledge));
-
-		var mission = {Noun:$('#name').val()} +", " + {name: $('#name').val()} + "shouted.";
-		console.log ($knowledge);
-
-		$('.container').append($(mission));
-
-		var sentiment = "Though" + {Sentiment: $('radio1', 'radio2', 'radio3').val()} + ", " + {name: $('#name').val()} + " was able to overcome all obstacles with the power of their "+ {Noun:$('noun-2').val()};
-
-		console.log ($sentiment);
-
-		$('.container').append($(sentiment));
-
-		var success = "In the end, their success can be contributed entirely to their " + {Sentiment: $('check1', 'check2', 'check3').val()} + " "+ {Noun:$('noun-2').val()}; + ".";
-
-		console.log ($success);
-
-		$('.container').append($(success));
-
-
-
-
-
-*/
-
-				
-
 		    // Stop the form from submitting
-
 	    	// Append the new <section> created above.
-
 	    	/*
-			
 				For each value entered into a form input, add the input to the corresponding sentence, then append the text into the results section:
-
 				"Once upon a time there was a Developer named NAME."
-
 				"NAME came to General Asssembly to VERB1 the great mountain of programming knowledge."
-
 				""MISSION", NAME shouted."
-	
 				"Though SENTIMENT, NAME was able to overcome all obstacles with the power of their NOUN."
-
 				"In the end, their success can be contributed entirely to their " + ADJECTIVE2[list each one checked, comma-separated] + NOUN2."
-
 	    	*/ 
 		});
 		console.log ("testing");

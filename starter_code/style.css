@@ -1,25 +1,49 @@
 /*-------- Utility Styles --------*/
-* {
+* {	
 	box-sizing: border-box; 
-	/* ^^^ Forces all elements to include content, padding, and border as part of their width/height calculation: 
-	http://www.w3schools.com/cssref/css3_pr_box-sizing.asp */
+	font-family: 'Proza Libre', sans-serif;
 }
 
-/* 
-	Use Google Fonts to make all of the text Proza Libre.
+body {
+	font-size: 1em;
+}
+h1 {
+font-size:2em;
+font-weight: 700;
+letter-spacing: 0.05em;
+}
 
-	Make the Title twice as large as the body text, bold, and spaced evenly.
-*/
+
 
 /*-------- Main Styles --------*/
 
-/* 
-	Make the main container the full width of the page.
 
-	Make the two inner container (the form and the results) align side by side, on the left side of the screen.
+/*--- Make the main container the full width of the page.----*/
+.main {
+	width:100%;
+	
+}
+/*---	Make the two inner container (the form and the results) align side by side, on the left side of the screen.  ---*/
 
-	Every container, form, input, and button should have rounded corners.
-*/
+.form {
+	float:left;
+	width: 100%;
+  	background-color: #E3E6EC;
+  	border-radius: 15px;
+  	padding:20px;
+}
+
+#main {
+	float:left;
+}
+
+/*---		Every container, form, input, and button should have rounded corners.---*/
+input {
+	border-radius: 5px;
+	margin:5px;
+
+}
+
 
 /*-------- Form Styles --------*/
 
