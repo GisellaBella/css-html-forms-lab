@@ -97,25 +97,29 @@
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 	<script type="text/javascript">
 
-		var main = document.querySelector('#main');
-		function makeResults() {
+
+			var main = document.querySelector('#main');
+			function makeResults() {
 			var results = document.createElement('section');
 			results.innerHTML = '<h1>' + 'A true story:' + '</h1>';
 			results.className = 'container  results';
 			main.appendChild(results);
-
 			}
-	
+
+			function capitalizeFirstLetter(string) {
+    		return string[0].toUpperCase() + string.slice(1);
+			}
+
 			$("form").on("submit", function(event){
 			event.preventDefault();
 
 			makeResults();
 
-			var $onceUpon = "Once upon a time there was a Developer named " + $('#name').val() + ". ";
-			var $knowledge = $('#name').val()  + " came to General Asssembly to" + " " + $('verb-1').val() + " the great mountain of programming knowledge. ";
-			var $mission = $('#mission').val() +", " + $('#name').val() + " shouted.";
-			var $sentiment = "Though " + $('radio1').val("dubious,")+ ", " + $('#name').val() + " was able to overcome all obstacles with the power of their "+ $('noun-2').val();
-			var $success = ". In the end, their success can be contributed entirely to their " + $('#check2').val("honed") +" "+ $('#noun-2').val() + ".";	
+			var $onceUpon = "Once upon a time there was a Developer named " + capitalizeFirstLetter ($('#name').val())+  ". ";
+			var $knowledge = capitalizeFirstLetter ($('#name').val())  + " came to General Asssembly to " + $('input[name=verb-1]:checked').val() + " the great mountain of programming knowledge. ";
+			var $mission = capitalizeFirstLetter ($('#mission').val()) +", " + capitalizeFirstLetter ($('#name').val()) + " shouted.";
+			var $sentiment = "Though " + $('input[name=radio1]:checked').val() + ", " + capitalizeFirstLetter($('#name').val()) + " was able to overcome all obstacles with the power of their "+ $('noun-2').val();
+			var $success = ". In the end, their success can be contributed entirely to their " + $('input[name=adjective-2]:checkbox:checked').val() +" "+ $('#noun-2').val() + ".";	
 
 			$('.results').append($onceUpon);
 			$('.results').append($knowledge);
