@@ -118,7 +118,7 @@
 			var $onceUpon = "Once upon a time there was a Developer named " + capitalizeFirstLetter ($('#name').val())+  ". ";
 			var $knowledge = capitalizeFirstLetter ($('#name').val())  + " came to General Asssembly to " + $('#verb-1').val() + " the great mountain of programming knowledge. ";
 			var $mission = capitalizeFirstLetter ($('#mission').val()) +", " + capitalizeFirstLetter ($('#name').val()) + " shouted.";
-			var $sentiment = "Though " + $('#radio1').val() + ", " + capitalizeFirstLetter($('#name').val()) + " was able to overcome all obstacles with the power of their "+ $('noun-2').val();
+			var $sentiment = "Though " + $('#radio1').val() + ", " + capitalizeFirstLetter($('#name').val()) + " was able to overcome all obstacles with the power of their "+ $('#noun-2').val();
 			var $success = ". In the end, their success can be contributed entirely to their " + $('input[name=adjective-2]:checkbox:checked').val() +" "+ $('#noun-2').val() + ".";	
 
 			$('.results').append($onceUpon);
